@@ -9,6 +9,7 @@ Summary(pl):	%{_pearname} - Klasa sprawdzaj±ca poprawno¶æ dla Belgii
 Name:		php-pear-%{_pearname}
 Version:	0.1.2
 Release:	1
+Epoch:		0
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -36,10 +37,10 @@ Package containes locale validation for Belgium such as:
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Pakiet do sprawdzania poprawno¶ci danych dla Belgii:
+Pakiet do sprawdzania poprawno¶ci dla Belgii danych takich jak:
 - kod pocztowy
 - numer konta bankowego
-- wiadomo¶æ Structured Bank Transfer (transfer mêdzy dwoma bankami
+- wiadomo¶æ Structured Bank Transfer (transfer miêdzy dwoma bankami
   krajowymi)
 - VAT
 - narodowy numer identyfikacyjny (National ID)
@@ -77,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log docs/%{_pearname}/{LICENSE,docs/Validate_BE.txt}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Validate/BE.php
+%dir %{php_pear_dir}/data/Validate_BE
 %{php_pear_dir}/data/Validate_BE/BE_postcodes.txt
 
 %files tests
