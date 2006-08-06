@@ -1,19 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Validate
 %define		_subclass	BE
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	Validate_BE
 
 Summary:	%{_pearname} - Validation class for Belgium
 Summary(pl):	%{_pearname} - Klasa sprawdzaj±ca poprawno¶æ dla Belgii
 Name:		php-pear-%{_pearname}
-Version:	0.1.2
+Version:	0.1.3
 Release:	1
-Epoch:		0
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	16955011605a140b1d58ea82821d8c54
+# Source0-md5:	17c86b481351c3a6014345aa7bc1e670
 URL:		http://pear.php.net/package/Validate_BE/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -76,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log docs/%{_pearname}/{LICENSE,docs/Validate_BE.txt}
+%doc install.log docs/%{_pearname}/docs/Validate_BE.txt
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Validate/BE.php
 %dir %{php_pear_dir}/data/Validate_BE
