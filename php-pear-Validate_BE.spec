@@ -5,7 +5,7 @@
 %define		_pearname	Validate_BE
 
 Summary:	%{_pearname} - Validation class for Belgium
-Summary(pl.UTF-8):   %{_pearname} - Klasa sprawdzająca poprawność dla Belgii
+Summary(pl.UTF-8):	%{_pearname} - Klasa sprawdzająca poprawność dla Belgii
 Name:		php-pear-%{_pearname}
 Version:	0.1.3
 Release:	1
@@ -51,7 +51,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
