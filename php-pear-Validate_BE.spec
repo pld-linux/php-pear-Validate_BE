@@ -5,7 +5,7 @@
 %define		_pearname	Validate_BE
 
 Summary:	%{_pearname} - Validation class for Belgium
-Summary(pl):	%{_pearname} - Klasa sprawdzaj±ca poprawno¶æ dla Belgii
+Summary(pl.UTF-8):   %{_pearname} - Klasa sprawdzajÄ…ca poprawnoÅ›Ä‡ dla Belgii
 Name:		php-pear-%{_pearname}
 Version:	0.1.3
 Release:	1
@@ -36,11 +36,11 @@ Package containes locale validation for Belgium such as:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Pakiet do sprawdzania poprawno¶ci dla Belgii danych takich jak:
+%description -l pl.UTF-8
+Pakiet do sprawdzania poprawnoÅ›ci dla Belgii danych takich jak:
 - kod pocztowy
 - numer konta bankowego
-- wiadomo¶æ Structured Bank Transfer (transfer miêdzy dwoma bankami
+- wiadomoÅ›Ä‡ Structured Bank Transfer (transfer miÄ™dzy dwoma bankami
   krajowymi)
 - VAT
 - narodowy numer identyfikacyjny (National ID)
@@ -51,7 +51,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
@@ -59,7 +59,7 @@ AutoReq:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
