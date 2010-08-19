@@ -3,22 +3,21 @@
 %define		_subclass	BE
 %define		_status		beta
 %define		_pearname	Validate_BE
-
 Summary:	%{_pearname} - Validation class for Belgium
 Summary(pl.UTF-8):	%{_pearname} - Klasa sprawdzająca poprawność dla Belgii
 Name:		php-pear-%{_pearname}
-Version:	0.1.3
-Release:	3
+Version:	0.1.4
+Release:	1
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	17c86b481351c3a6014345aa7bc1e670
+# Source0-md5:	4a9d0bc28d432b3ed2801ba729758c48
 URL:		http://pear.php.net/package/Validate_BE/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-pear
 Requires:	php-common >= 3:4.2.0
+Requires:	php-pear
 Requires:	php-pear-Validate >= 0.5.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -83,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/Validate/BE.php
 %dir %{php_pear_dir}/data/Validate_BE
 %{php_pear_dir}/data/Validate_BE/BE_postcodes.txt
+%{php_pear_dir}/data/Validate_BE/package_BE.xml
 
 %files tests
 %defattr(644,root,root,755)
