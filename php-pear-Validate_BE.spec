@@ -17,6 +17,7 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.2.0
 Requires:	php-pear
 Requires:	php-pear-Validate >= 0.5.0
+Obsoletes:	php-pear-Validate_BE-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,19 +47,6 @@ Pakiet do sprawdzania poprawności dla Belgii danych takich jak:
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development
-Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 # pear/tests/pearname/tests -> pear/tests/pearname
@@ -81,7 +69,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{php_pear_dir}/data/Validate_BE
 %{php_pear_dir}/data/Validate_BE/BE_postcodes.txt
 %{php_pear_dir}/data/Validate_BE/package_BE.xml
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
